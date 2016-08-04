@@ -19,18 +19,20 @@ class ViewController: NSViewController {
     @IBAction func rockPressed(_ sender: AnyObject) {
         
         modelInstance.userChoice = "rock"
-        playResult.stringValue  = modelInstance.play()
-        compChoice.stringValue = modelInstance.computerChoice
-        usrChoice.stringValue = modelInstance.userChoice
+        
+            playResult.stringValue  = modelInstance.play()
+            compChoice.stringValue = modelInstance.computerChoice
+            usrChoice.stringValue = modelInstance.userChoice
     
     }
     
     @IBAction func paperPressed(_ sender: AnyObject) {
         
         modelInstance.userChoice = "paper"
-        playResult.stringValue  = modelInstance.play()
-        compChoice.stringValue = modelInstance.computerChoice
-        usrChoice.stringValue = modelInstance.userChoice
+        
+            playResult.stringValue  = modelInstance.play()
+            compChoice.stringValue = modelInstance.computerChoice
+            usrChoice.stringValue = modelInstance.userChoice
         
         
     }
@@ -38,9 +40,10 @@ class ViewController: NSViewController {
     @IBAction func SissorsPressed(_ sender: AnyObject) {
         
         modelInstance.userChoice = "scissors"
-        playResult.stringValue  = modelInstance.play()
-        compChoice.stringValue = modelInstance.computerChoice
-        usrChoice.stringValue = modelInstance.userChoice
+        
+            playResult.stringValue  = modelInstance.play()
+            compChoice.stringValue = modelInstance.computerChoice
+            usrChoice.stringValue = modelInstance.userChoice
         
         
     }
