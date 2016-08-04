@@ -26,30 +26,30 @@ class appModel {
 
         switch choice1 {
 
-                case choice2: result = "The result is a tie!"
+                case choice2: result = "It's a tie!"
 
                 case "rock":  if ( choice2 == "scissors" ) {
-                            result = "rock wins !"
+                            result = "Rock wins !"
                         }
                         else {
-                            result = "paper wins !"
+                            result = "Paper wins !"
                             }
 
                 case "paper":   if (choice2 == "rock" ) {
-                            result = "paper wins !"
+                            result = "Paper wins !"
                         }
                         else {
-                            result =  "scissors wins !"
+                            result =  "Scissors wins !"
                             }
 
                 case "scissors":   if (choice2 == "rock" ) {
-                            result = "rock wins !"
+                            result = "Rock wins !"
                         }
                         else {
-                            result =  "scissors wins !"
+                            result =  "Scissors wins !"
                             }
 
-                default : result = "The result is a tie!"
+                default : result = "It's a tie!"
             }
 
         return result

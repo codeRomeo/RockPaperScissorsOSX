@@ -53,7 +53,7 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
         
-         playResult.stringValue  = modelInstance.play()
+         playResult.stringValue  = "Pick your choice to play"
 
     }
 
@@ -61,6 +61,8 @@ class ViewController: NSViewController {
         didSet {
             
         // Update the view, if already loaded.
+            
+            playResult.stringValue  = modelInstance.play()
             
         }
     }
