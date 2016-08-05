@@ -5,6 +5,6 @@ Project aims to explore and learn about macOS UI contruction and MVC model of ap
 
 Current UI (cleaned up) -- updated 8/5/2016
 
-[[https://github.com/codeRomeo/RockPaperScissorsOSX/blob/master/RockPaperOSX.png]]
+![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/master/RockPaperOSX.png)
 
 updates to follow....
