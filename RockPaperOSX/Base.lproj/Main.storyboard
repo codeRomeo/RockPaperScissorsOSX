@@ -681,7 +681,7 @@
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zxt-HV-Zgk">
                                 <rect key="frame" x="31" y="127" width="116" height="19"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Rock" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" sound="Bottle" inset="2" id="GfS-ux-WgG">
+                                <buttonCell key="cell" type="roundRect" title="Rock" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" sound="Pop" inset="2" id="GfS-ux-WgG">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemSemibold" size="12"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -695,7 +695,7 @@ IA
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftP-zY-mFI">
                                 <rect key="frame" x="181" y="127" width="116" height="19"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Paper" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" sound="Bottle" inset="2" id="KaL-5d-Rht">
+                                <buttonCell key="cell" type="roundRect" title="Paper" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" sound="Pop" inset="2" id="KaL-5d-Rht">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemSemibold" size="12"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -709,7 +709,7 @@ IA
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-xG-Wj9">
                                 <rect key="frame" x="333" y="127" width="116" height="19"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Scissors" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" sound="Bottle" inset="2" id="7x8-10-guq">
+                                <buttonCell key="cell" type="roundRect" title="Scissors" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" sound="Pop" inset="2" id="7x8-10-guq">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemSemibold" size="12"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -751,7 +751,7 @@ IA
                                 <rect key="frame" x="31" y="41" width="419" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="JTF-DN-Ico">
-                                    <font key="font" metaFont="systemSemibold" size="22"/>
+                                    <font key="font" metaFont="systemBold" size="22"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -792,6 +792,6 @@ IA
         </scene>
     </scenes>
     <resources>
-        <sound name="Bottle"/>
+        <sound name="Pop"/>
     </resources>
 </document>

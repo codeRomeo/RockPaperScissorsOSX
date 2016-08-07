@@ -20,43 +20,7 @@ class appModel {
     var computerChoice = ""
 
 
-    func compare (_ choice1: String, choice2: String) -> String {
-
-        var result: String
-
-        switch choice1 {
-
-                case choice2: result = "It's a tie!"
-
-                case "rock":  if ( choice2 == "scissors" ) {
-                            result = "Rock wins !"
-                        }
-                        else {
-                            result = "Paper wins !"
-                            }
-
-                case "paper":   if (choice2 == "rock" ) {
-                            result = "Paper wins !"
-                        }
-                        else {
-                            result =  "Scissors wins !"
-                            }
-
-                case "scissors":   if (choice2 == "rock" ) {
-                            result = "Rock wins !"
-                        }
-                        else {
-                            result =  "Scissors wins !"
-                            }
-
-                default : result = "It's a tie!"
-            }
-
-        return result
-
-        //Function ends
-    }
-
+    
     func play() -> String {
 
             var result = ""
@@ -79,4 +43,39 @@ class appModel {
         
         return result
     }
+    
+    func compare (_ choice1: String, choice2: String) -> String {
+        
+        var result: String
+        
+        switch choice1 {
+            
+        case choice2: result = "It's a tie!"
+            
+        case "rock":  if ( choice2 == "scissors" ) {  result = "Rock wins !"  } else {  result = "Paper wins !"  }
+            
+        case "paper":   if (choice2 == "rock" ) {
+            result = "Paper wins !"
+        }
+        else {
+            result =  "Scissors wins !"
+            }
+            
+        case "scissors":   if (choice2 == "rock" ) {
+            result = "Rock wins !"
+        }
+        else {
+            result =  "Scissors wins !"
+            }
+            
+        default : result = "It's a tie!"
+        }
+        
+        return result
+        
+        //Function ends
+    }
+
+    
+    
 }

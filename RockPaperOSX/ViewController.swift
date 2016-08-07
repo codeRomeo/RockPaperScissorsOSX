@@ -18,33 +18,18 @@ class ViewController: NSViewController {
     
     @IBAction func rockPressed(_ sender: AnyObject) {
         
-        modelInstance.userChoice = "rock"
-        
-            playResult.stringValue  = modelInstance.play()
-            compChoice.stringValue = modelInstance.computerChoice
-            usrChoice.stringValue = modelInstance.userChoice
-    
+        updateUI(choice: "rock")
     }
     
     @IBAction func paperPressed(_ sender: AnyObject) {
         
-        modelInstance.userChoice = "paper"
-        
-            playResult.stringValue  = modelInstance.play()
-            compChoice.stringValue = modelInstance.computerChoice
-            usrChoice.stringValue = modelInstance.userChoice
-        
+        updateUI(choice: "paper")
         
     }
     
     @IBAction func SissorsPressed(_ sender: AnyObject) {
         
-        modelInstance.userChoice = "scissors"
-        
-            playResult.stringValue  = modelInstance.play()
-            compChoice.stringValue = modelInstance.computerChoice
-            usrChoice.stringValue = modelInstance.userChoice
-        
+        updateUI(choice: "scissors")
         
     }
     
@@ -66,6 +51,13 @@ class ViewController: NSViewController {
             
         }
     }
-
+    
+    func updateUI(choice:String ) {
+        
+        modelInstance.userChoice = choice
+        playResult.stringValue  = modelInstance.play()
+        compChoice.stringValue = modelInstance.computerChoice
+        usrChoice.stringValue = modelInstance.userChoice
+    }
 
 }
