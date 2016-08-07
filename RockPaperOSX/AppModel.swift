@@ -16,64 +16,60 @@ import Foundation
 class appModel {
 
     var userChoice = ""
-    var randomNum = 0
     var computerChoice = ""
-
-
+    var UImessage = ""
+    var userScore = 0
+    var computerScore = 0
     
     func play() -> String {
 
-            var result = ""
-
-            randomNum = Int(arc4random_uniform(3)+1)
-
-            switch randomNum {
-
-                case 1: computerChoice = "rock"
-
-                case 2: computerChoice = "paper"
-
-                case 3: computerChoice = "scissors"
-
-                default : computerChoice = ""
-
-            }
+        var result = ""
         
-            result = compare(userChoice, choice2: computerChoice)
+        computerChoice = randomizeRPS()
+        result = compare(userChoice, compChoice: computerChoice)
+        print(userScore, computerScore)
         
         return result
     }
     
-    func compare (_ choice1: String, choice2: String) -> String {
+    func compare (_ usrChoice: String, compChoice: String) -> String {
         
         var result: String
         
-        switch choice1 {
+        switch usrChoice {
             
-        case choice2: result = "It's a tie!"
+            case compChoice: result = "It's a tie!"
+
+            case "rock":        if (compChoice == "scissors" )     {   result = "Rock wins !"; userScore+=1  }   else    {   result = "Paper wins !"; computerScore+=1  }
+
+            case "paper":       if (compChoice == "rock" )         {   result = "Paper wins !"; userScore+=1 }   else    {   result =  "Scissors wins !"; computerScore+=1 }
+
+            case "scissors":    if (compChoice == "rock" )         {   result = "Rock wins !"; computerScore+=1 }   else    {   result =  "Scissors wins !"; userScore+=1  }
+
+            default : result = "It's a tie!"
             
-        case "rock":  if ( choice2 == "scissors" ) {  result = "Rock wins !"  } else {  result = "Paper wins !"  }
-            
-        case "paper":   if (choice2 == "rock" ) {
-            result = "Paper wins !"
-        }
-        else {
-            result =  "Scissors wins !"
-            }
-            
-        case "scissors":   if (choice2 == "rock" ) {
-            result = "Rock wins !"
-        }
-        else {
-            result =  "Scissors wins !"
-            }
-            
-        default : result = "It's a tie!"
         }
         
         return result
         
-        //Function ends
+    }
+    
+    func randomizeRPS() -> String {
+        
+        let randomNum: Int = Int(arc4random_uniform(3)+1)
+        
+        switch randomNum {
+            
+        case 1: return "rock"
+            
+        case 2: return "paper"
+            
+        case 3: return "scissors"
+            
+        default : return ""
+            
+        }
+        
     }
 
     
