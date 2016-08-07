@@ -721,10 +721,10 @@ IA
                                 </connections>
                             </button>
                             <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Gco-Yl-XV2">
-                                <rect key="frame" x="33" y="21" width="415" height="69"/>
+                                <rect key="frame" x="104" y="21" width="273" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" ambiguous="YES" id="QYW-hw-9DI">
-                                    <rect key="frame" x="0.0" y="0.0" width="415" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="273" height="69"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="fillColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -748,7 +748,7 @@ IA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ksk-sz-u00">
-                                <rect key="frame" x="31" y="41" width="419" height="27"/>
+                                <rect key="frame" x="102" y="41" width="277" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="JTF-DN-Ico">
                                     <font key="font" metaFont="systemBold" size="22"/>
@@ -778,11 +778,51 @@ IA
                                 <rect key="frame" x="20" y="103" width="440" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
+                            <box fixedFrame="YES" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="RlT-v2-fPL">
+                                <rect key="frame" x="17" y="17" width="82" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="VAM-LQ-olu">
+                                    <rect key="frame" x="2" y="2" width="78" height="71"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-hF-o4k">
+                                            <rect key="frame" x="-2" y="20" width="82" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="Ck6-vu-X4L">
+                                                <font key="font" metaFont="systemBold" size="24"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="kdJ-1t-0sr">
+                                <rect key="frame" x="382" y="16" width="81" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="hJu-G4-Uee">
+                                    <rect key="frame" x="2" y="2" width="77" height="72"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBV-or-VS7">
+                                            <rect key="frame" x="-3" y="21" width="82" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="XH8-ts-Foh">
+                                                <font key="font" metaFont="systemBold" size="24"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="compChoice" destination="dtp-c5-POd" id="96Z-Ie-5F1"/>
+                        <outlet property="computerScore" destination="HJn-hF-o4k" id="H9t-1V-Hja"/>
                         <outlet property="playResult" destination="Ksk-sz-u00" id="38W-8T-adR"/>
+                        <outlet property="userScore" destination="GBV-or-VS7" id="FBD-PD-dGr"/>
                         <outlet property="usrChoice" destination="jsD-Ha-aS5" id="Jnl-KS-7aE"/>
                     </connections>
                 </viewController>

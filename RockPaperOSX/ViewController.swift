@@ -15,6 +15,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var compChoice: NSTextField!
     @IBOutlet weak var usrChoice: NSTextField!
     @IBOutlet weak var playResult: NSTextField!
+    @IBOutlet weak var computerScore: NSTextField!
+    @IBOutlet weak var userScore: NSTextField!
+    
     
     @IBAction func rockPressed(_ sender: AnyObject) {
         
@@ -58,6 +61,8 @@ class ViewController: NSViewController {
         playResult.stringValue  = modelInstance.play()
         compChoice.stringValue = modelInstance.computerChoice
         usrChoice.stringValue = modelInstance.userChoice
+        computerScore.stringValue = "\(modelInstance.computerScore)"
+        userScore.stringValue = "\(modelInstance.userScore)"
     }
 
 }
