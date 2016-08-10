@@ -6,6 +6,7 @@
 //  Copyright © 2016 Tariq Khalid. All rights reserved.
 
 import Foundation
+import Cocoa
 
 // ROCK * PAPER * SCISSORS
 //
@@ -43,6 +44,7 @@ class appModel {
     var uiMessage = ""          //  reserved for future updates
     var userScore = 0           //  Int variable to hold user Score
     var computerScore = 0       //  Int variable to hold computer score
+    var sounds = [ "Basso", "Submarine", "funk"]
     
 // * method *
     
@@ -69,19 +71,21 @@ class appModel {
         
         switch usrChoice {
             
-            case compChoice: result = "It's a tie!"     // quick test to eliminate a tie scenario
+        case compChoice:  result = "It's a tie!"     // quick test to eliminate a tie scenario
             
             // note that the IF ELSE statement is heavily compressed to improve readability
 
-            case "rock":        if (compChoice == "scissors" )     {   result = "Rock wins !"; userScore+=1  }   else    {   result = "Paper wins !"; computerScore+=1  }  // check two scenarios
+        case "rock":      if (compChoice == "scissors" )  { result = "Rock wins !"; userScore+=1 ; NSSound(named: "Submarine")?.play() }   else    {   result = "Paper wins !"; computerScore+=1; NSSound(named: "Basso")?.play()  }  // check two scenarios
 
-            case "paper":       if (compChoice == "rock" )         {   result = "Paper wins !"; userScore+=1 }   else    {   result =  "Scissors wins !"; computerScore+=1 } // check two scenarios
+        case "paper":    if (compChoice == "rock" )  { result = "Paper wins !"; userScore+=1 ; NSSound(named: "Submarine")?.play() }   else    {   result =  "Scissors wins !"; computerScore+=1; NSSound(named: "Basso")?.play() } // check two scenarios
 
-            case "scissors":    if (compChoice == "rock" )         {   result = "Rock wins !"; computerScore+=1 }   else    {   result =  "Scissors wins !"; userScore+=1  } // check two scenarios
+        case "scissors": if (compChoice == "rock" )  { result = "Rock wins !"; computerScore+=1; NSSound(named: "Basso")?.play() }   else    {   result =  "Scissors wins !"; userScore+=1 ; NSSound(named: "Submarine")?.play() } // check two scenarios
 
-            default : result = "It's a tie!"
+        default : result = "It's a tie!"
             
         }
+        
+        if result == "It's a tie!" { NSSound(named: "Morse")?.play()  }
         
         return result // return outcome as string
         
