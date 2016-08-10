@@ -52,7 +52,7 @@ class appModel {
         
         computerChoice = randomizeRPS()                             // randomize a choice string for computer
         result = compare(userChoice, compChoice: computerChoice)    // ask for user input and compare; store in result variable ; update scores
-        print(userScore, computerScore)                             // output to console scores (for testing; this line will not be in production
+        print(computerScore, userScore)                             // output to console scores (for testing; this line will not be in production
         
         return result                                               // return winner
     }
@@ -94,7 +94,7 @@ class appModel {
         //  This method (function) returns a random choice between Rock, Paper or Scissors as String.
         //  Pls. note that arc4random_uniform() function is a Darwin specific call in module #Foundation; may not be present in Linux etc.
         
-        let randomNum: Int = Int(arc4random_uniform(3)+1) // function call to return a random integer number between 1 to 3 (Darwin specific call; may not work on other platforms)
+        let randomNum: Int = Int(arc4random_uniform(3)+1) // function call to return a random integer number between 1 to 3 
         
         switch randomNum {   // return a selection based on random number
             

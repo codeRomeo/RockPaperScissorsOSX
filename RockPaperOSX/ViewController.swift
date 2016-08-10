@@ -78,10 +78,7 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
         usrChoice.stringValue = modelInstance.userChoice                //  update computer choice text field
         computerScore.stringValue = "\(modelInstance.computerScore)"    //  update computer score
         userScore.stringValue = "\(modelInstance.userScore)"            //  update user score
-        
-        NSSound(named: "Purr")?.play()
-        
-        
+                
     }
 
 }
