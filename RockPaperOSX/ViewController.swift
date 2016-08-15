@@ -74,6 +74,7 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
         
         modelInstance.userChoice = choice                               //  set user choice from user input
         playResult.stringValue  = modelInstance.play()                  //  update result field with game play result (game play is trigerred once)
+        playSnd(type: modelInstance.outcome)
         compChoice.stringValue = modelInstance.computerChoice           //  update user choice text field
         usrChoice.stringValue = modelInstance.userChoice                //  update computer choice text field
         computerScore.stringValue = "\(modelInstance.computerScore)"    //  update computer score
@@ -81,5 +82,15 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
         
                 
     }
+    
+    
+    
+        func playSnd(type: Int) {
+            
+            let sounds = [ "","Submarine","Basso", "Morse"]
+            NSSound(named: "\(sounds[type])")?.play()
+      }
+    
+    
 
 }

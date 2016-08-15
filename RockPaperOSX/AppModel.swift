@@ -6,7 +6,6 @@
 //  Copyright © 2016 Tariq Khalid. All rights reserved.
 
 import Foundation
-import Cocoa
 
 // ROCK * PAPER * SCISSORS
 //
@@ -44,52 +43,63 @@ class appModel {
     var uiMessage = ""          //  reserved for future updates
     var userScore = 0           //  Int variable to hold user Score
     var computerScore = 0       //  Int variable to hold computer score
-    var sounds = [ "Basso", "Submarine", "funk"]
+    var outcome:Int = 3
     
-// * method *
+    
+    
     
     func play() -> String {
         
         var result = ""  // initialize a result string variable
         
         computerChoice = randomizeRPS()                             // randomize a choice string for computer
-        result = compare(userChoice, compChoice: computerChoice)    // ask for user input and compare; store in result variable ; update scores
-        print(computerScore, userScore)                             // output to console scores (for testing; this line will not be in production
         
-        return result                                               // return winner
+        result = compare(userChoice, compChoice: computerChoice)    // ask for user input and compare; store in result variable ; update scores
+        
+        switch result {
+            
+            case "User":        userScore+=1; outcome = 1
+                
+            case "Computer":    computerScore+=1; outcome = 2
+                
+            case "None": outcome = 3; break
+            
+        default: outcome = 3; break
+            
+        }
+      
+        print(computerScore, userScore)   // output to console scores (for testing; this line will not be in production
+        
+        return uiMessage     // return winner
     }
     
 // * method *
     
     func compare (_ usrChoice: String, compChoice: String) -> String {
        
-        //  This method (function) is the meat of the game logic. It takes two choices (strings) as arguments and compares to each other to determine the winner.
-        //  It's not a clever logic, but works;  also the score is updated at the same time because it's simple and stupid.
-        //  Ideally, the score should be updated independent of this function. ( dependencies, global variable etc...)
+         //  This method (function) is the meat of the game logic. It takes two choices (strings) as arguments and compares to each other to determine the winner.
         
-        var result: String
+        var winner: String
         
         switch usrChoice {
             
-        case compChoice:  result = "It's a tie!"     // quick test to eliminate a tie scenario
-            
-            // note that the IF ELSE statement is heavily compressed to improve readability
+        case compChoice:  winner = "None" ;  uiMessage = "Oh Gee, It's a tie! 😐"    // quick test to eliminate a tie scenario
+                
+               
+            case "rock":        if (compChoice == "scissors" )  { winner = "User"; uiMessage = "Rock breaks Scissors 😂"  }   else    {   winner = "Computer"; uiMessage = "Paper covers rock ☹️"   }  // check two scenarios
 
-        case "rock":      if (compChoice == "scissors" )  { result = "Rock wins !"; userScore+=1 ; NSSound(named: "Submarine")?.play() }   else    {   result = "Paper wins !"; computerScore+=1; NSSound(named: "Basso")?.play()  }  // check two scenarios
+            case "paper":       if (compChoice == "rock" )  { winner = "User"; uiMessage = "Paper wraps rock 😀"  }   else    {   winner = "Computer"; uiMessage = "Scissors cuts paper 😰" } // check two scenarios
 
-        case "paper":    if (compChoice == "rock" )  { result = "Paper wins !"; userScore+=1 ; NSSound(named: "Submarine")?.play() }   else    {   result =  "Scissors wins !"; computerScore+=1; NSSound(named: "Basso")?.play() } // check two scenarios
+            case "scissors":    if (compChoice == "rock" )  { winner = "Computer"; uiMessage = "Rock dunces Scissors 😣"  }   else    {   winner = "User"; uiMessage = "Scissors rips paper 😎" } // check two scenarios
 
-        case "scissors": if (compChoice == "rock" )  { result = "Rock wins !"; computerScore+=1; NSSound(named: "Basso")?.play() }   else    {   result =  "Scissors wins !"; userScore+=1 ; NSSound(named: "Submarine")?.play() } // check two scenarios
-
-        default : result = "It's a tie!"
+            default:            winner = "None" ; uiMessage = "It's a tie! 😐"
             
         }
         
-        if result == "It's a tie!" { NSSound(named: "Morse")?.play()  }
-        
-        return result // return outcome as string
+        return winner // return outcome as string
         
     }
+    
 
 // * method *
     
