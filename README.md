@@ -1,24 +1,23 @@
 # Rock Paper Scissors OSX
 
 This is a MacOS (OSX) application build in to learn and test Swift language.
-Project aims to explore and learn about macOS UI contruction and MVC model of app building.
+Project aims to explore and learn about macOS UI construction and MVC model of app building. The main goal is to test if the application logic (model) can be ported without modification to another platform (eg.iOS). Another goal is to learn git version control through Xcode. All repository changes were done through Xcode IDE interface without ever going to terminal.
 
-<<<<<<< HEAD
-![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/master/RockPaperOSX.png)
+This is the primary interface. Its a single window, single screen application with only one main menu item.
+![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss1.png)
 
-Update 8/5/2016:
-
-1	-This is the active branch where the UI was cleaned up to current acceptable design.
-
-2	-This branch is a candidate for merge into master
-
-3	-pending TODO
+Init Screen: 
   
+![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss2.png)
+
+Main window: 
   
-=======
-Current UI (cleaned up) -- updated 8/5/2016
+![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss3.png)
 
-![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/master/RockPaperOSX.png)
+Application window and menu bar:
 
-updates to follow....
->>>>>>> master
+  
+![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss4.png)
+
+
+Currently, the app is in stable version 0.2.0 and a built for release is being tested outside xcode environment.
