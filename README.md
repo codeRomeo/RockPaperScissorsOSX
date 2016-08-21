@@ -1,7 +1,5 @@
 # Rock Paper Scissors OSX
 
-### Welcome to the Rock Paper Scissors OSX application wiki!
-
 This is a MacOS (OSX) application build in to learn and test Swift language.
 Project aims to explore and learn about macOS UI construction and MVC model of app building. The main goal is to test if the application logic (model) can be ported without modification to another platform (eg.iOS). Another goal is to learn git version control through Xcode. All repository changes were done through Xcode IDE interface without ever going to terminal.
 
