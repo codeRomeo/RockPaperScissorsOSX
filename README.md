@@ -7,10 +7,14 @@ This is the primary interface. Its a single window, single screen application wi
 ![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss1.png)
 
 Init Screen: 
+  
 ![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss2.png)
 
 Main winow: 
+  
 ![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss3.png)
 
 Application window and menu bar:
+
+  
 ![alt tag](https://github.com/codeRomeo/RockPaperScissorsOSX/blob/dev-0_2_1/RPS_ss4.png)
