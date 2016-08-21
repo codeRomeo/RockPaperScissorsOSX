@@ -68,7 +68,7 @@ class appModel {
             
         }
       
-        print(computerScore, userScore)   // output to console scores (for testing; this line will not be in production
+        // print(computerScore, userScore)   // output to console scores (for testing; this line will not be in production
         
         return uiMessage     // return winner
     }
@@ -83,16 +83,16 @@ class appModel {
         
         switch usrChoice {
             
-        case compChoice:  winner = "None" ;  uiMessage = "Oh Gee, It's a tie! 😐"    // quick test to eliminate a tie scenario
+        case compChoice:  winner = "None" ;  uiMessage = "...It's a tie 😐"    // quick test to eliminate a tie scenario
                 
                
-            case "rock":        if (compChoice == "scissors" )  { winner = "User"; uiMessage = "Rock breaks Scissors 😂"  }   else    {   winner = "Computer"; uiMessage = "Paper covers rock ☹️"   }  // check two scenarios
+            case "Rock":        if (compChoice == "Scissors" )  { winner = "User"; uiMessage = "Rock breaks Scissors! 😂"  }   else    {   winner = "Computer"; uiMessage = "Paper covers Rock! ☹️"   }  // check two scenarios
 
-            case "paper":       if (compChoice == "rock" )  { winner = "User"; uiMessage = "Paper wraps rock 😀"  }   else    {   winner = "Computer"; uiMessage = "Scissors cuts paper 😰" } // check two scenarios
+            case "Paper":       if (compChoice == "Rock" )  { winner = "User"; uiMessage = "Paper wraps Rock! 😀"  }   else    {   winner = "Computer"; uiMessage = "Scissors cuts Paper! 😰" } // check two scenarios
 
-            case "scissors":    if (compChoice == "rock" )  { winner = "Computer"; uiMessage = "Rock dunces Scissors 😣"  }   else    {   winner = "User"; uiMessage = "Scissors rips paper 😎" } // check two scenarios
+            case "Scissors":    if (compChoice == "Rock" )  { winner = "Computer"; uiMessage = "Rock dunces Scissors! 😣"  }   else    {   winner = "User"; uiMessage = "Scissors rips Paper! 😎" } // check two scenarios
 
-            default:            winner = "None" ; uiMessage = "It's a tie! 😐"
+            default:            winner = "None" ; uiMessage = "...It's a tie 😐"
             
         }
         
@@ -112,11 +112,11 @@ class appModel {
         
         switch randomNum {   // return a selection based on random number
             
-            case 1: return "rock"
+            case 1: return "Rock"
                 
-            case 2: return "paper"
+            case 2: return "Paper"
                 
-            case 3: return "scissors"
+            case 3: return "Scissors"
             
         default : return ""
             

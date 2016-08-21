@@ -30,14 +30,13 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
     @IBOutlet weak var playResult: NSTextField!     //  Interface builder link to text field that displays  result of play
     @IBOutlet weak var computerScore: NSTextField!  //  Interface builder link to text field that displays  Computer score
     @IBOutlet weak var userScore: NSTextField!      //  Interface builder link to text field that displays  user score
-    
-    
+  
     @IBAction func rockPressed(_ sender: AnyObject) {
         
         //  Interface builder method triggered by "Rock" button press
         //  set choice to "rock" anc update view
         
-        updateUI(choice: "rock")    // call this method to refresh View after game play
+        updateUI(choice: "Rock")    // call this method to refresh View after game play
     }
     
     @IBAction func paperPressed(_ sender: AnyObject) {
@@ -45,7 +44,7 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
         //  Interface builder method triggered by "Paper" button press
         //  set choice to "paper" and update view
         
-        updateUI(choice: "paper")   // call this method to refresh View after game play
+        updateUI(choice: "Paper")   // call this method to refresh View after game play
         
     }
     
@@ -54,14 +53,19 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
         //  Interface builder method triggered by "Scissors" button press
         //  set choice to "Scissors" and update view
         
-        updateUI(choice: "scissors")    // call this method to refresh View after game play
+        updateUI(choice: "Scissors")    // call this method to refresh View after game play
         
     }
     
     override func viewDidLoad() {   // (Boilerplate code by Xcode)
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        /* Do any additional setup after loading the view.
+           some Stackoverflow fancy bullshit that could be useful later
+           view.layer?.backgroundColor = NSColor(red: 0.9, green: 1, blue: 1, alpha: 1).cgColor
+           view.wantsLayer = true
+           self.view.layer?.backgroundColor = NSColor.windowBackgroundColor().cgColor
+        */
         
         playResult.stringValue  = "Pick your choice to play"   // set initial message and initialize view when app is loaded
        
@@ -74,23 +78,17 @@ class ViewController: NSViewController {    // (Boilerplate code by Xcode)
         
         modelInstance.userChoice = choice                               //  set user choice from user input
         playResult.stringValue  = modelInstance.play()                  //  update result field with game play result (game play is trigerred once)
-        playSnd(type: modelInstance.outcome)
+        playSnd(type: modelInstance.outcome)                            //  play appropriate sound
         compChoice.stringValue = modelInstance.computerChoice           //  update user choice text field
         usrChoice.stringValue = modelInstance.userChoice                //  update computer choice text field
         computerScore.stringValue = "\(modelInstance.computerScore)"    //  update computer score
         userScore.stringValue = "\(modelInstance.userScore)"            //  update user score
         
-                
     }
     
-    
-    
-        func playSnd(type: Int) {
+    func playSnd(type: Int) {
             
             let sounds = [ "","Submarine","Basso", "Morse"]
             NSSound(named: "\(sounds[type])")?.play()
-      }
-    
-    
-
+    }
 }
